@@ -59,3 +59,5 @@ def chn_dir (dir_name):
     try:
         os.chdir(dir_name)
         print("Вы перешли в папку {}".format(dir_name))
+    except FileNotFoundError:
+        print("Папка с именем {0} не найдена по данному адресу: {1}".format(dir_name, os.getcwd()))
